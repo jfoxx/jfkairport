@@ -19,6 +19,12 @@
   --dark-color: #ccc;
   --text-color: black;
 
+  --primary-color: #003264;
+  --primary-alt-color: #02478a;
+  --secondary-color: #ffb515; 
+  --alert-color: #D53D2D;
+
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
@@ -38,7 +44,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 105px;
 }
 
 @font-face {
