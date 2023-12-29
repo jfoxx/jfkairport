@@ -195,12 +195,15 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 0;
+  position: relative;
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 0;
+
+
   }
 }
 
@@ -208,6 +211,23 @@ main .section {
   .section > div {
     max-width: 1200px;
     margin: auto;
+
+    &:has(picture) {
+      max-width: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      p {
+        display: inline;
+
+        img {
+          min-width: 100%;
+        }
+      }
+
+    }
   }
 }
 

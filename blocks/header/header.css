@@ -142,14 +142,14 @@ header nav[aria-expanded="true"] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 230px;
+  flex-basis: 191px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
 }
 
 header nav .nav-brand img {
-  width: 230px;
+  width: 191px;
   height: auto;
 }
 
@@ -248,9 +248,9 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     position: fixed;
     left: -1em;
-    width: 100%;
+    width: calc(100% - 20rem);
     margin-top: 15px;
-    padding: 1em;
+    padding: 1em 10rem;
     background-color: var(--primary-alt-color);
     white-space: initial;
     justify-content: center;
@@ -264,6 +264,9 @@ header nav .nav-sections ul > li > ul > li {
     flex-direction: column;
     text-align: center;
     font-weight: bold;
+    justify-content: center;
+    width: 16%;
+    height: 100%;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li span.icon {
@@ -272,10 +275,28 @@ header nav .nav-sections ul > li > ul > li {
     height: 50px;
     display: inline-block;
     background-color: white;
+    margin-bottom: 15px;
   }
 }
 
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-tools ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+header nav .nav-tools ul li {
+  font-size: var(--body-font-size-xs);
+  white-space: nowrap;
+}
+
+header nav .nav-tools ul li:first-of-type {
+  padding-right: 5px;
+  border-right: 1px solid white;
+  margin-right: 5px;
 }
