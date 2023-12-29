@@ -4,7 +4,6 @@ import {
   loadHeader,
   loadFooter,
   decorateButtons,
-  decorateIcons,
   decorateSections,
   decorateBlocks,
   decorateTemplateAndTheme,
@@ -28,6 +27,32 @@ function buildHeroBlock(main) {
     section.append(buildBlock('hero', { elems: [picture, h1] }));
     main.prepend(section);
   }
+}
+
+
+/**
+ * Add <img> for icon, prefixed with codeBasePath and optional prefix.
+ * @param {Element} [span] span element with icon classes
+ * @param {string} [prefix] prefix to be added to icon src
+ * @param {string} [alt] alt text to be added to icon
+ */
+function decorateIcon(span, prefix = '', alt = '') {
+  const iconName = Array.from(span.classList)
+    .find((c) => c.startsWith('icon-'))
+    .substring(5);
+  span.style.maskImage = `url(${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
+}
+
+/**
+ * Add <img> for icons, prefixed with codeBasePath and optional prefix.
+ * @param {Element} [element] Element containing icons
+ * @param {string} [prefix] prefix to be added to icon the src
+ */
+function decorateIcons(element, prefix = '') {
+  const icons = [...element.querySelectorAll('span.icon')];
+  icons.forEach((span) => {
+    decorateIcon(span, prefix);
+  });
 }
 
 /**

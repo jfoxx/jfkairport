@@ -184,6 +184,8 @@ main img {
   display: inline-block;
   height: 24px;
   width: 24px;
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 
 .icon img {
