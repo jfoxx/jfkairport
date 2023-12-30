@@ -280,22 +280,22 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 /* tools */
-header nav .nav-sections.nav-tools {
+header nav .nav-tools {
   grid-area: tools;
 }
 
-header nav .nav-sections.nav-tools ul {
+header nav .nav-tools ul {
   display: flex;
   list-style: none;
   padding: 0;
 }
 
-header nav .nav-sections.nav-tools ul li {
+header nav .nav-tools ul li {
   font-size: var(--body-font-size-xs);
   white-space: nowrap;
 }
 
-header nav .nav-sections.nav-tools ul li:first-of-type {
+header nav .nav-tools ul li:first-of-type {
   padding-right: 5px;
   border-right: 1px solid white;
   margin-right: 5px;
