@@ -29,14 +29,13 @@ function buildHeroBlock(main) {
   }
 }
 
-
 /**
  * Add <img> for icon, prefixed with codeBasePath and optional prefix.
  * @param {Element} [span] span element with icon classes
  * @param {string} [prefix] prefix to be added to icon src
  * @param {string} [alt] alt text to be added to icon
  */
-function decorateIcon(span, prefix = '', alt = '') {
+function decorateIcon(span, prefix = '') {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
