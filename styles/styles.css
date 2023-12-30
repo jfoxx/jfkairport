@@ -18,6 +18,11 @@
   --light-color: #eee;
   --dark-color: #ccc;
   --text-color: black;
+  --primary-color: #003264;
+  --primary-alt-color: #02478a;
+  --secondary-color: #ffb515; 
+  --alert-color: #D53D2D;
+
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
@@ -38,7 +43,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 105px;
 }
 
 @font-face {
@@ -178,6 +183,8 @@ main img {
   display: inline-block;
   height: 24px;
   width: 24px;
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 
 .icon img {
@@ -187,12 +194,15 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 0;
+  position: relative;
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 0;
+
+
   }
 }
 
@@ -200,6 +210,23 @@ main .section {
   .section > div {
     max-width: 1200px;
     margin: auto;
+
+    &:has(picture) {
+      max-width: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      p {
+        display: inline;
+
+        img {
+          min-width: 100%;
+        }
+      }
+
+    }
   }
 }
 
