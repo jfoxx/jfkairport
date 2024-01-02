@@ -284,7 +284,8 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
-header nav .nav-tools ul {
+/* stylelint-disable  no-descending-specificity */
+header nav .nav-tools ul { 
   display: flex;
   list-style: none;
   padding: 0;
