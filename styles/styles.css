@@ -243,6 +243,32 @@ main .parallax > div.default-content-wrapper:has(picture) {
   display: none;
 }
 
+main .boxed {
+  padding: 80px 16rem;
+}
+
+main .boxed > div {
+  background: var(--primary-alt-color);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {
