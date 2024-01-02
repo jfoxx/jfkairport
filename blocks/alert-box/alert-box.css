@@ -1,5 +1,6 @@
 .alert-box-container {
   display: flex;
+  min-height: 100vh;
 }
 
 .alert-box-container > .default-content-wrapper {
