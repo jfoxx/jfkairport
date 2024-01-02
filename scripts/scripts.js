@@ -55,6 +55,19 @@ function decorateIcons(element, prefix = '') {
 }
 
 /**
+ * Set parallax images as background styles.
+ * @param {Element} [element] element set to parallax
+ */
+function setParallax(element) {
+  const parallaxItems = [...element.querySelectorAll('.parallax')];
+  parallaxItems.forEach((i) => {
+    const img = i.querySelector('div.default-content-wrapper > p > picture > img');
+    const imgSrc = img.getAttribute('src');
+    i.style.backgroundImage = `url("${imgSrc}")`;
+  });
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
@@ -91,6 +104,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  setParallax(main);
 }
 
 /**

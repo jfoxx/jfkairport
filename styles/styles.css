@@ -232,6 +232,17 @@ main .section {
   }
 }
 
+main .parallax {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main .parallax > div.default-content-wrapper:has(picture) {
+  display: none;
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {
