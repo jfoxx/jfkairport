@@ -59,14 +59,12 @@ function decorateIcons(element, prefix = '') {
  * @param {Element} [element] element set to parallax
  */
 function setParallax(element) {
-  const parallaxItems = [...element.querySelectorAll(".parallax")];
-  parallaxItems.forEach( i => {
-    let img = i.querySelector('div.default-content-wrapper > p > picture > img');
-    let imgSrc = img.getAttribute('src');
-    i.style.backgroundImage = "url('"+ imgSrc +"')";
-  })
-  
-  
+  const parallaxItems = [...element.querySelectorAll('.parallax')];
+  parallaxItems.forEach((i) => {
+    const img = i.querySelector('div.default-content-wrapper > p > picture > img');
+    const imgSrc = img.getAttribute('src');
+    i.style.backgroundImage = `url("${imgSrc}")`;
+  });
 }
 
 /**
