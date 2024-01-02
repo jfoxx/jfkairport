@@ -7,9 +7,6 @@
   width: 44%;
   background: var(--primary-color);
   margin: 2%;
-}
-
-.icon-links > div {
   display: flex;
   color: white;
 }
