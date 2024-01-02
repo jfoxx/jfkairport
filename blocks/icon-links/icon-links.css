@@ -1,0 +1,25 @@
+.icon-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-links > div {
+  width: 44%;
+  background: var(--primary-color);
+  margin: 2%;
+  display: flex;
+  color: white;
+}
+
+.icon-links > div > div:first-of-type {
+  width: 45px;
+  height: 45px;
+  padding: 20px;
+}
+
+.icon-links > div > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+}
