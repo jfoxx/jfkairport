@@ -1,0 +1,89 @@
+.alert-box-container {
+  display: flex;
+}
+
+.alert-box-container > .default-content-wrapper {
+  flex-basis: 100%;
+}
+
+.alert-box-wrapper {
+  width: 20%;
+  position: relative;
+  padding-left: 20%;
+}
+
+.icon-links-wrapper {
+  width: 40% !important;
+  position: relative !important;
+  padding-right: 20%;
+}
+
+.alert-box {
+  background-color: var(--secondary-color);
+  position: relative;
+  color: var(--primary-color);
+}
+
+.alert-box > div > div:first-of-type {
+  /* background: blue; */
+  transform: rotate(-45deg);
+  color: white;
+  text-align: center;
+  border: 50px solid transparent;
+  border-bottom: 50px solid var(--primary-color);
+  width: 100px;
+  position: absolute;
+  left: -88px;
+  top: -29px;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: -50px;
+}
+
+.alert-box > div > div:first-of-type:before {
+  content: '';
+  position: absolute;
+  right: -50px;
+  bottom: -70px;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid black;
+}
+
+.alert-box > div > div:first-of-type:after {
+  content: '';
+  position: absolute;
+  left: -49px;
+  bottom: -80px;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid black;
+}
+
+.alert-box > div > div:first-of-type strong {
+  position: absolute;
+  left: -5px;
+  bottom: -43px;
+  white-space: nowrap;
+}
+
+.alert-box > div > div:last-of-type {
+  padding-left: 60px;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.alert-box > div > div:last-of-type a.button {
+  padding: 0;
+  background: none;
+  white-space: normal;
+  border: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: normal;
+  font-style: italic;
+}
