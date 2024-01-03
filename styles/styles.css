@@ -248,7 +248,7 @@ main .boxed {
 }
 
 main .boxed > div {
-  background: var(--primary-alt-color);
+  background: rgb(8 72 135 / 92%);
   margin: 0;
   padding: 20px;
   text-align: center;
