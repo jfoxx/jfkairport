@@ -1,0 +1,35 @@
+.flight-form-wrapper, .city-form-wrapper {
+  width: 80%;
+  margin: auto;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    >div {
+      position: relative;
+      margin-bottom: 25px;
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid var(--secondary-color);
+        line-height: 3;
+
+        &[type=button] {
+          width: auto;
+          border: none;
+          background-color: var(--secondary-color);
+          color: var(--primary-color);
+          font-size: 1.2rem;
+          margin-right: 30px;
+          padding: 0 20px;
+        }
+      }
+      label {
+        position: absolute;
+        top: 0;
+        font-size: .9rem;
+      }
+    }
+  }
+}
