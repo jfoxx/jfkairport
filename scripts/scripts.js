@@ -29,6 +29,59 @@ function buildHeroBlock(main) {
   }
 }
 
+function getElementByXpath(xp) {
+  return document.evaluate(
+    xp,
+    document,
+    null,
+    XPathResult.FIRST_ORDERED_NODE_TYPE,
+    null,
+  ).singleNodeValue;
+}
+
+/**
+ * Find sub variables for interactive components and execute js
+ * @param {string} [variable] the name of the interactive item being substituted
+ */
+async function variableSub(variable) {
+  const xpath = `//em[text()="{{${variable}}}"]`;
+  const element = getElementByXpath(xpath);
+  const wrapper = document.createElement('div');
+  wrapper.className = `${variable}-wrapper`;
+  element.textContent = '';
+  element.replaceWith(wrapper);
+  try {
+    const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/blocks/${variable}/${variable}.css`);
+    const decorationComplete = new Promise((resolve) => {
+      (async () => {
+        try {
+          await import(
+            `${window.hlx.codeBasePath}/blocks/${variable}/${variable}.js`
+          );
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.log(`failed to load module for ${variable}`, error);
+        }
+        resolve();
+      })();
+    });
+    await Promise.all([cssLoaded, decorationComplete]);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.log(`failed to load block ${variable}`, error);
+  }
+}
+
+function findVariables(main) {
+  const candidates = main.getElementsByTagName('em');
+  const filtered = Array.from(candidates).filter((el) => el.innerText.startsWith('{{'));
+  filtered.forEach((i) => {
+    const value = i.innerText;
+    const variable = value.split('{{')[1].split('}}')[0];
+    variableSub(variable);
+  });
+}
+
 /**
  * Add <img> for icon, prefixed with codeBasePath and optional prefix.
  * @param {Element} [span] span element with icon classes
@@ -105,6 +158,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   setParallax(main);
+  findVariables(main);
 }
 
 /**
