@@ -35,7 +35,7 @@ function getElementByXpath(xp) {
     document,
     null,
     XPathResult.FIRST_ORDERED_NODE_TYPE,
-    null
+    null,
   ).singleNodeValue;
 }
 
@@ -46,8 +46,6 @@ function getElementByXpath(xp) {
 async function variableSub(variable) {
   const xpath = `//em[text()="{{${variable}}}"]`;
   const element = getElementByXpath(xpath);
-  console.log(xpath);
-  console.log(element);
   const wrapper = document.createElement('div');
   wrapper.className = `${variable}-wrapper`;
   element.textContent = '';
@@ -57,7 +55,7 @@ async function variableSub(variable) {
     const decorationComplete = new Promise((resolve) => {
       (async () => {
         try {
-          const mod = await import(
+          await import(
             `${window.hlx.codeBasePath}/blocks/${variable}/${variable}.js`
           );
         } catch (error) {
@@ -74,14 +72,14 @@ async function variableSub(variable) {
   }
 }
 
-function findVariables(main){
+function findVariables(main) {
   const candidates = main.getElementsByTagName('em');
-  const filtered = Array.from(candidates).filter((el) => el.innerText.startsWith("{{"));
+  const filtered = Array.from(candidates).filter((el) => el.innerText.startsWith('{{'));
   filtered.forEach((i) => {
     const value = i.innerText;
     const variable = value.split('{{')[1].split('}}')[0];
     variableSub(variable);
-  })
+  });
 }
 
 /**

@@ -1,4 +1,4 @@
-(function() {
+(function flightForm() {
   const target = document.querySelector('div.flight-form-wrapper');
   const form = document.createElement('form');
   const airlineWrapper = document.createElement('div');
@@ -7,17 +7,17 @@
   const buttonWrapper = document.createElement('div');
   buttonWrapper.className = 'button-wrapper';
   const airlineField = document.createElement('input');
-  airlineField.id='Airlines';
+  airlineField.id = 'Airlines';
   const airlineFieldLabel = document.createElement('label');
   airlineFieldLabel.setAttribute('for', 'Airlines');
-  airlineFieldLabel.innerText = "Airline";
+  airlineFieldLabel.innerText = 'Airline';
   const flightNumberField = document.createElement('input');
-  flightNumberField.id='Flight-Number';
+  flightNumberField.id = 'Flight-Number';
   const flightNumberFieldLabel = document.createElement('label');
   flightNumberFieldLabel.setAttribute('for', 'Flight-Number');
-  flightNumberFieldLabel.innerText = "Flight Number";
+  flightNumberFieldLabel.innerText = 'Flight Number';
   const dateField = document.createElement('input');
-  dateField.id='Date';
+  dateField.id = 'Date';
   const dateFieldLabel = document.createElement('label');
   dateFieldLabel.setAttribute('for', 'Date');
   dateFieldLabel.innerText = 'Date';
@@ -33,4 +33,4 @@
   dateWrapper.append(dateField, dateFieldLabel);
   form.append(airlineWrapper, flightNumberWrapper, dateWrapper, buttonWrapper);
   target.append(form);
-})();
+}());
