@@ -1,0 +1,36 @@
+ul.tab-controls {
+  width: 60%;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+ul.tab-controls li {
+  margin: 0 15px;
+  font-size: 1.2rem;
+  border-bottom: 3px solid #5a97cd;
+  width: 100%;
+  cursor: pointer;
+
+  &.active {
+    border-color: var(--secondary-color);
+  }
+}
+
+ul.tab-contents {
+  list-style: none;
+  padding: 0;
+  width: 60%;
+  margin: 40px auto;
+
+  li {
+    text-align: left;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
