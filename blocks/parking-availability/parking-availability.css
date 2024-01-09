@@ -1,0 +1,74 @@
+.terminal-parking {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    list-style: none;
+    padding: 0 80px;
+    display: flex;
+    justify-content: start;
+    text-align: left;
+    width: calc(100% - 160px);
+    margin: 0;
+
+    li:first-of-type {
+      width: 40px;
+      margin-right: 20%;
+
+      .tIcon {
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        display: block;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid white;
+        font-weight: bold;
+
+        &.Red {
+          background-color: red;
+        }
+        &.Orange {
+          background-color: #ffa300;
+          color: black;
+          border-color: black;
+        }
+        &.Yellow {
+          background-color: #ffcd00;
+          color: black;
+          border-color: black;
+        }
+        &.Blue {
+          background-color: #004b87;
+        }
+      }
+    }
+    li {
+      width: 30%;
+      small {
+        display: block;
+      }
+    }
+  }
+
+  .meter {
+    line-height: 40px;
+    background: gray;
+    padding: 0 5px;
+    color: black;
+    position: relative;
+
+    &> span {
+      display: block;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+  }
+    >p {
+      position: relative;
+    }
+}
+
+}
