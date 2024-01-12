@@ -1,13 +1,18 @@
+/* stylelint-disable no-descending-specificity */
+
+
 .book-parking {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  
   > div {
     display: flex;
     width: 100%;
     margin-bottom: 20px;
     text-align: left;
 
+   
     >div {
       width: 45%;
       margin-right: 5%;
@@ -16,9 +21,11 @@
         margin-right: 0;
       }
     }
+
     &:last-of-type{
       display: block;
     }
+
   }
 
   input {
