@@ -1,3 +1,5 @@
+/* stylelint-disable  no-descending-specificity */
+
 footer {
   background-color: white;
   font-size: var(--body-font-size-s);
@@ -7,7 +9,6 @@ footer .footer {
   margin: auto;
 
   .section {
-
     >div {
       padding: 2rem;
       max-width: 1200px;
@@ -19,9 +20,11 @@ footer .footer {
 
       >div {
         display: flex;
+
         >p {
           width: 150px;
           margin-right: 10%;
+
           img {
             max-width: 100%;
             height: auto;
