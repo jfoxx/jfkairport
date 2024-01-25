@@ -1,4 +1,4 @@
-(function cityForm() {
+(function parkingAvailability() {
   fetch('https://prod-62.westus.logic.azure.com/workflows/ef989ab7c1ba45a79485e9841b0306aa/triggers/manual/paths/invoke/api/parking?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=SjkjItnIJJOPoCzBzIzmTjVDZafXL4BbMm5dqSBj9IA')
     .then((response) => response.json())
     .then((json) => {
