@@ -1,0 +1,53 @@
+/* stylelint-disable no-descending-specificity */
+
+
+.book-parking {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  
+  > div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+
+   
+    >div {
+      width: 45%;
+      margin-right: 5%;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    &:last-of-type{
+      display: block;
+    }
+
+  }
+
+  input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--secondary-color);
+    line-height: 3;
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &[type="button"] {
+      width: auto;
+      border: none;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      margin: auto;
+      padding: 0 20px;
+    }
+  }
+}
