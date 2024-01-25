@@ -1,12 +1,43 @@
 footer {
-  padding: 2rem;
-  background-color: var(--light-color);
+  background-color: white;
   font-size: var(--body-font-size-s);
 }
 
 footer .footer {
-  max-width: 1200px;
   margin: auto;
+
+  .section {
+
+    >div {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    &.dark {
+      background-color: var(--primary-color);
+
+      >div {
+        display: flex;
+        >p {
+          width: 150px;
+          margin-right: 10%;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        >ul {
+          list-style: none;
+          padding: 0;
+          font-size: 14px;
+          color: white;
+          margin-right: 10%;
+        }
+      }
+    }
+  }
 }
 
 footer .footer p {
