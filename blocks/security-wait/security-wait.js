@@ -6,7 +6,7 @@
       const waitDiv = document.createElement('div');
       waitDiv.className = 'security-wait-times';
       const thead = document.createElement('ul');
-      thead.className='header';
+      thead.className = 'header';
       const hOne = document.createElement('li');
       const hTwo = document.createElement('li');
       hTwo.innerText = 'Terminal';

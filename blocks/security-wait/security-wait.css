@@ -1,7 +1,9 @@
 #security > p { text-align: center;}
+
 .security-wait-times {
   display: table;
   width: 100%;
+  
   >ul {
     list-style: none;
     display: table-row;
@@ -40,12 +42,14 @@
         color: white;
       }
     }
+    
     &.terminal-4 {
       >li:first-of-type > span {
         background-color: #004b87;
         color: white;
       }
     }
+    
     &.terminal-5 {
       >li:first-of-type > span {
         background-color: #ffcd00;
@@ -53,6 +57,7 @@
         border-color: black;
       }
     }
+    
     &.terminal-7 {
       >li:first-of-type > span {
         background-color: #ffa300;
@@ -60,6 +65,7 @@
         border-color: black;
       }
     }
+    
     &.terminal-8 {
       >li:first-of-type > span {
         background-color: red;
