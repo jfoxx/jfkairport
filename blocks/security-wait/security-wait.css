@@ -1,0 +1,70 @@
+#security > p { text-align: center;}
+.security-wait-times {
+  display: table;
+  width: 100%;
+  >ul {
+    list-style: none;
+    display: table-row;
+    width: 100%;
+    font-size: 14px;
+
+    &:nth-child(even){
+      background-color: #003264;
+    }
+
+    >li {
+      display: table-cell;
+      padding: 15px;
+
+      &:first-of-type > span {
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        display: block;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid white;
+        font-weight: bold;
+      }
+
+      
+    }
+
+    &.header {
+      font-weight: bold;
+    }
+
+    &.terminal-1 {
+      >li:first-of-type > span {
+        background-color: green;
+        color: white;
+      }
+    }
+    &.terminal-4 {
+      >li:first-of-type > span {
+        background-color: #004b87;
+        color: white;
+      }
+    }
+    &.terminal-5 {
+      >li:first-of-type > span {
+        background-color: #ffcd00;
+        color: black;
+        border-color: black;
+      }
+    }
+    &.terminal-7 {
+      >li:first-of-type > span {
+        background-color: #ffa300;
+        color: black;
+        border-color: black;
+      }
+    }
+    &.terminal-8 {
+      >li:first-of-type > span {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}
