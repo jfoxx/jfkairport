@@ -1,0 +1,18 @@
+{
+    "project": "JFK Airport",
+    "plugins": [
+    {
+      "id": "asset-library",
+      "title": "Assets",
+      "environments": [
+        "edit"
+      ],
+      "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html?repository-id=author-p49252-e308251.adobeaemcloud.com",
+      "isPalette": true,
+      "includePaths": [
+        "**.docx**"
+      ],
+      "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
+    }
+    ]
+  }
