@@ -10,8 +10,11 @@ import {
   waitForLCP,
   loadBlocks,
   loadCSS,
+  toClassName,
+  getMetadata,
+  loadScript,
+  toCamelCase,
 } from './aem.js';
-
 
 const AUDIENCES = {
   mobile: () => window.innerWidth < 600,
