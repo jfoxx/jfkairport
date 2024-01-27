@@ -180,7 +180,7 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-    setBackgroundImg(main)
+    setBackgroundImg(main);
     buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
