@@ -22,3 +22,9 @@ tabs.forEach((i) => {
     activePanel.classList.add('active');
   });
 });
+
+const toggle = document.querySelector('.tray-toggle');
+const tray = document.querySelector('.tray');
+toggle.addEventListener('click', function(){
+ tray.classList.toggle('collapsed');
+});
