@@ -1,0 +1,88 @@
+
+.tray {
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  transition: all .2s;
+
+  &.collapsed {
+    bottom: -170px;
+  }
+}
+
+.slider-wrapper {
+  background-color: rgba(8 72 135 / 85%);
+  box-shadow: 0 0 20px 0 #fff;
+  padding: 22px 10%;
+  width: 80%;
+  position: relative;
+
+  .tray-toggle {
+    position: absolute;
+    top: -66px;
+    left: calc(57% - 223px);
+    height: 50px;
+    padding: 0 40px 0 20px;
+    line-height: 50px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 18px;
+    border-radius: 3px;
+    box-shadow: -3px 0 15px 0 #000;
+
+    &::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      mask-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20d%3D%22M201.4%20342.6c12.5%2012.5%2032.8%2012.5%2045.3%200l160-160c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L224%20274.7%2086.6%20137.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l160%20160z%22%2F%3E%3C%2Fsvg%3E');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      background-color: var(--primary-color);
+      position: absolute;
+      right: 10px;
+      top: 30%;
+      }
+  }
+
+  .next-button {
+    position: absolute;
+    right: 5%;
+    top: 40px;
+    height: 80px;
+    background-color: white;
+    mask-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2216%22%20width%3D%2210%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20opacity%3D%221%22%20fill%3D%22%231E3050%22%20d%3D%22M278.6%20233.4c12.5%2012.5%2012.5%2032.8%200%2045.3l-160%20160c-12.5%2012.5-32.8%2012.5-45.3%200s-12.5-32.8%200-45.3L210.7%20256%2073.4%20118.6c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l160%20160z%22%2F%3E%3C%2Fsvg%3E');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+  }
+
+  .prev-button {
+    position: absolute;
+    left: 5%;
+    top: 40px;
+    height: 80px;
+    background-color: white;
+    mask-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20d%3D%22M41.4%20233.4c-12.5%2012.5-12.5%2032.8%200%2045.3l160%20160c12.5%2012.5%2032.8%2012.5%2045.3%200s12.5-32.8%200-45.3L109.3%20256%20246.6%20118.6c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200l-160%20160z%22%2F%3E%3C%2Fsvg%3E');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+  }
+
+  ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  
+    li {
+      width: 300px;
+      margin-right: 30px;
+      flex-shrink: 0;
+
+      &.scrolled {
+        margin-left: -300px;
+      }
+    }
+  }
+}
