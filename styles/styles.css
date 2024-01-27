@@ -206,6 +206,26 @@ main .section {
   }
 }
 
+main .section > div.default-content-wrapper {
+  max-width: none;
+  width: 200%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  p {
+    height: 100vh;
+
+    picture {
+      height: 100vh;
+
+      img {
+        height: 100vh;
+        width: auto;
+      }
+    }
+  }
+}
+
 @media (width >= 900px) {
  main .section > div {
     max-width: 1200px;

@@ -1,12 +1,13 @@
 .icon-links {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .icon-links > div {
-  width: 44%;
+  width: 100%;
   background: var(--primary-color);
-  margin: 2%;
+  margin: 2% 0;
   display: flex;
   color: white;
 }
@@ -22,4 +23,15 @@
   flex-direction: column;
   justify-content: center;
   font-size: 18px;
+}
+
+@media (width >= 900px) {
+  .icon-links {
+    flex-direction: unset;
+  }
+
+  .icon-links > div {
+    width: 44%;
+    margin: 2%;
+  }
 }
