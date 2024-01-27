@@ -25,15 +25,16 @@ tabs.forEach((i) => {
 
 const toggle = document.querySelector('.tray-toggle');
 const tray = document.querySelector('.tray');
-toggle.addEventListener('click', function(){
- tray.classList.toggle('collapsed');
+toggle.addEventListener('click', () => {
+  tray.classList.toggle('collapsed');
 });
 
 const nextButton = document.querySelector('.slider-wrapper > button.next-button');
 const prevButton = document.querySelector('.slider-wrapper > button.prev-button');
 const slides = document.querySelectorAll('.slider-wrapper > ul > li');
-nextButton.addEventListener('click', function(){
-  for(let i of slides) {
+nextButton.addEventListener('click', () => {
+  /* eslint-disable-next-line no-restricted-syntax */
+  for (const i of slides) {
     if (i.classList.contains('scrolled')) {
       // do nothing
     } else {
@@ -41,14 +42,13 @@ nextButton.addEventListener('click', function(){
       break;
     }
   }
- 
 });
-
-prevButton.addEventListener('click', function(){
-  for(let i of slides) {
+prevButton.addEventListener('click', () => {
+  /* eslint-disable-next-line no-restricted-syntax */
+  for (const i of slides) {
     if (i.classList.contains('scrolled')) {
       if (i.nextElementSibling.classList.contains('scrolled')) {
-        //do nothing
+        // do nothing
       } else {
         i.classList.remove('scrolled');
         break;
@@ -57,5 +57,4 @@ prevButton.addEventListener('click', function(){
       // do nothing
     }
   }
- 
 });

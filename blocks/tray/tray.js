@@ -16,7 +16,6 @@ export default function decorate(block) {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     const link = li.firstChild.querySelector('a');
-    const img = li.lastChild.querySelector('img');
     if (link != null) {
       link.textContent = '';
       link.className = '';
@@ -30,4 +29,3 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(wrapper);
 }
-
