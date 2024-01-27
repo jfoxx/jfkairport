@@ -65,6 +65,12 @@ function buildHeroBlock(main) {
   }
 }
 
+function setBackgroundImg(main) {
+  const hero = main.firstElementChild;
+  const picture = hero.querySelector('img').src.split('?')[0];
+  hero.style.backgroundImage = `url(${picture}?width=2000&amp;format=png&amp;optimize=medium)`;
+}
+
 function getElementByXpath(xp) {
   return document.evaluate(
     xp,
@@ -174,6 +180,7 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
+    setBackgroundImg(main)
     buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console

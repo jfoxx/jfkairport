@@ -17,6 +17,7 @@ footer .footer {
 
     &.dark {
       background-color: var(--primary-color);
+      background-image: none !important;
 
       >div {
         display: flex;

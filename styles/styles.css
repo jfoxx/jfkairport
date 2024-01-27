@@ -209,6 +209,15 @@ main .section {
   }
 }
 
+main .section:first-of-type {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  > div.default-content-wrapper {
+    display: none;
+  }
+}
+
 main .section > div.default-content-wrapper {
   max-width: none;
   width: 200%;
