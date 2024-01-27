@@ -28,3 +28,34 @@ const tray = document.querySelector('.tray');
 toggle.addEventListener('click', function(){
  tray.classList.toggle('collapsed');
 });
+
+const nextButton = document.querySelector('.slider-wrapper > button.next-button');
+const prevButton = document.querySelector('.slider-wrapper > button.prev-button');
+const slides = document.querySelectorAll('.slider-wrapper > ul > li');
+nextButton.addEventListener('click', function(){
+  for(let i of slides) {
+    if (i.classList.contains('scrolled')) {
+      // do nothing
+    } else {
+      i.classList.add('scrolled');
+      break;
+    }
+  }
+ 
+});
+
+prevButton.addEventListener('click', function(){
+  for(let i of slides) {
+    if (i.classList.contains('scrolled')) {
+      if (i.nextElementSibling.classList.contains('scrolled')) {
+        //do nothing
+      } else {
+        i.classList.remove('scrolled');
+        break;
+      }
+    } else {
+      // do nothing
+    }
+  }
+ 
+});

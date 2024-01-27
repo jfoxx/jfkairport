@@ -68,6 +68,7 @@
 
   ul {
     list-style: none;
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -78,6 +79,10 @@
       width: 300px;
       margin-right: 30px;
       flex-shrink: 0;
+
+      &.scrolled {
+        margin-left: -300px;
+      }
     }
   }
 }
