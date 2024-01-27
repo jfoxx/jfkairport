@@ -1,7 +1,6 @@
 .icon-links {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
 }
 
 .icon-links > div {

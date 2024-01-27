@@ -10,6 +10,9 @@
  * governing permissions and limitations under the License.
  */
 
+
+ /* stylelint-disable no-descending-specificity */
+
 :root {
   /* colors */
   --link-color: #035fe6;
@@ -212,6 +215,7 @@ main .section > div.default-content-wrapper {
   height: 100vh;
   position: absolute;
   z-index: -1;
+  
   p {
     height: 100vh;
 

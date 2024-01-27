@@ -37,6 +37,7 @@
   width: 80%;
   padding-left: 5%;
 }
+
 @media (width >= 900px) {
 .icon-links-wrapper {
   width: 40% !important;
