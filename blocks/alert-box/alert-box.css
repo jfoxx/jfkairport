@@ -15,7 +15,10 @@
         height: 100vh;
         display: inline;
 
-        picture { height: 100vh; display: block;}
+        picture { 
+          height: 100vh; 
+          display: block;
+        }
 
         img {
             height: 100vh;
