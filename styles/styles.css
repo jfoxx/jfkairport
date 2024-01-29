@@ -274,3 +274,13 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
+
+/* Announcements Template */
+body.announcement main .default-content-wrapper {
+  max-width: 1200px !important;
+  margin: auto !important;
+  margin-left: calc((100% - 1200px)/2) !important;
+  height: auto !important;
+  position: relative;
+}
